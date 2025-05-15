@@ -1,95 +1,58 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React from 'react';
+import Image from 'next/image';
+import image from '../assets/img/IMG-20230826-WA0017.jpg';
 
-export default function Home() {
+function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <div style={{ backgroundColor: '#FAF9F8' }} className="flex min-h-screen items-center">
+      <div
+        className="w-[520px] overflow-hidden rounded-[10px] px-4 me-10"
+      >
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src={image}
+          alt="Wasiq Manzoor"
+          width={500}
+          className="rounded-[10px]"
+          style={{ objectFit: 'cover' }}
         />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      </div>
 
-        <div className={styles.ctas}>
+
+
+      <div className='' style={{ width: '450px' }}>
+        <h1 className="text-4xl">
+          Hey, I'm{' '}
+          <span className="text-blue-500 hover:text-black">
+            Wasiq Manzoor
+          </span>
+        </h1>
+
+        <h1 className='py-3' style={{ fontSize: '2.1rem', fontWeight: '700' }}>
+          <b>Full-stack Developer</b>
+        </h1>
+
+        <p>
+          Frontend Engineer using HTML, CSS, JavaScript, React, and Nextjs. Backend using Node, Express, MongoDb, Postgres & Prisma and Deploy. Can assist to build robust web, mobile, and desktop applications.
+        </p>
+        <div className="flex justify-center mt-5">
           <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            href="/Wasiq_Manzoor_Resume.pdf"
+            download="Wasiq_Manzoor_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 transition-all duration-300 mt-5 inline-block text-center shadow-md hover:scale-105"
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            Download Resume
           </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+
+
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      </div>
+
     </div>
+
   );
 }
+
+export default Home;

@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./global.css";
+import Navbar from "@/component/shared-component/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,8 +20,33 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet"
+        />
+       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} font-sans`}>
+        <div className="flex min-h-screen">
+          {/* Sidebar on the left */}
+          <aside
+            className="w-64 flex flex-col justify-center items-center"
+            style={{ backgroundColor: '#FAF9F8', minHeight: '100vh' }}
+          >
+            <Navbar />
+          </aside>
+
+
+          {/* Main content area */}
+          <main className="flex-1 p-6 " style={{ backgroundColor: '#FAF9F8' }}>
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
