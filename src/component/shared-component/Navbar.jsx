@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <div className="flex flex-col items-center gap-6 text-blue-600 font-bold cursor-pointer">
             <Link href="/">
-                <span className="material-symbols-outlined hover:scale-125 transition-transform duration-300" style={{ fontSize: '60px' }}>
+                <span className="material-symbols-outlined hover:scale-125 transition-transform duration-300" style={{ fontSize: '40px' }}>
                     home
                 </span>
             </Link>
@@ -14,18 +14,20 @@ function Navbar() {
             <Link href="/user/about">
                 <span
                     className="material-symbols-outlined hover:scale-125 transition-transform duration-300"
-                    style={{ fontSize: '60px' }}
+                    style={{ fontSize: '40px' }}
                 >
                     contacts
                 </span>
             </Link>
 
-            <span
-                className="material-symbols-outlined hover:scale-125 transition-transform duration-300"
-                style={{ fontSize: '60px' }}
-            >
-                shopping_bag
-            </span>
+            <Link href="/user/project">
+                <span
+                    className="material-symbols-outlined hover:scale-125 transition-transform duration-300"
+                    style={{ fontSize: '40px' }}
+                >
+                    shopping_bag
+                </span>
+            </Link>
         </div>
     );
 }

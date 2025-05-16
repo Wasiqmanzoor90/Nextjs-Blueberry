@@ -1,16 +1,5 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./global.css";
 import Navbar from "@/component/shared-component/Navbar";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -27,23 +16,17 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
-       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
-
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans`}>
+      <body className="font-sans">
         <div className="flex min-h-screen">
-          {/* Sidebar on the left */}
           <aside
             className="w-64 flex flex-col justify-center items-center"
             style={{ backgroundColor: '#FAF9F8', minHeight: '100vh' }}
           >
             <Navbar />
           </aside>
-
-
-          {/* Main content area */}
-          <main className="flex-1 p-6 " style={{ backgroundColor: '#FAF9F8' }}>
+          <main className="flex-1 p-6" style={{ backgroundColor: '#FAF9F8' }}>
             {children}
           </main>
         </div>
