@@ -18,17 +18,30 @@ export default function RootLayout({ children }) {
         />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       </head>
-      <body className="font-sans">
-        <div className="flex min-h-screen">
-          <aside
-            className="w-64 flex flex-col justify-center items-center"
-            style={{ backgroundColor: '#FAF9F8', minHeight: '100vh' }}
-          >
+      <body className="font-sans bg-[#FAF9F8]">
+        <div className="flex min-h-screen flex-col sm:flex-row">
+          {/* Sidebar (only on desktop) */}
+          <aside className="hidden sm:flex w-64 flex-col justify-center items-center bg-[#FAF9F8]">
             <Navbar />
           </aside>
-          <main className="flex-1 p-6" style={{ backgroundColor: '#FAF9F8' }}>
+
+          {/* Main Content */}
+          <main className="flex-1 p-4 sm:p-6 mb-16 sm:mb-0">
             {children}
           </main>
+
+          {/* Bottom Navbar (only on mobile) */}
+          <nav className="fixed bottom-0 left-0 w-full bg-white border-t shadow-md flex justify-around py-3 sm:hidden z-50">
+            <a href="/" className="text-gray-700 hover:text-blue-600 text-center">
+              <span className="material-symbols-outlined text-[28px]">home</span>
+            </a>
+            <a href="/user/about" className="text-gray-700 hover:text-blue-600 text-center">
+              <span className="material-symbols-outlined text-[28px]">contacts</span>
+            </a>
+            <a href="/user/project" className="text-gray-700 hover:text-blue-600 text-center">
+              <span className="material-symbols-outlined text-[28px]">shopping_bag</span>
+            </a>
+          </nav>
         </div>
       </body>
     </html>
