@@ -31,15 +31,27 @@ export default function RootLayout({ children }) {
           </main>
 
           {/* Bottom Navbar (only on mobile) */}
-          <nav className="fixed bottom-0 left-0 w-full bg-white border-t shadow-md flex justify-around py-3 sm:hidden z-50">
+          <nav className="fixed bottom-0 left-0 w-full bg-white  shadow-md flex justify-around py-3 sm:hidden z-50">
             <a href="/" className="text-gray-700 hover:text-blue-600 text-center">
-              <span className="material-symbols-outlined text-[28px]">home</span>
+            <span className="material-symbols-outlined hover:scale-125 transition-transform duration-300" style={{ fontSize: '0px' }}>
+                    home
+                </span>
             </a>
             <a href="/user/about" className="text-gray-700 hover:text-blue-600 text-center">
-              <span className="material-symbols-outlined text-[28px]">contacts</span>
+            <span
+                    className="material-symbols-outlined hover:scale-125 transition-transform duration-300"
+                    style={{ fontSize: '30px' }}
+                >
+                    contacts
+                </span>
             </a>
             <a href="/user/project" className="text-gray-700 hover:text-blue-600 text-center">
-              <span className="material-symbols-outlined text-[28px]">shopping_bag</span>
+            <span
+                    className="material-symbols-outlined hover:scale-125 transition-transform duration-300"
+                    style={{ fontSize: '30px' }}
+                >
+                    shopping_bag
+                </span>
             </a>
           </nav>
         </div>

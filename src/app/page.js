@@ -33,7 +33,7 @@ function Home() {
         </h2>
 
         <p className="text-base md:text-lg text-gray-700">
-          Frontend Engineer using HTML, CSS, JavaScript, React, and Next.js. Backend using Node, Express, MongoDB, Postgres & Prisma. I can help build robust web, mobile, and desktop apps.
+          Full-stack Developer skilled in building scalable web applications using React, Next.js, and Redux on the frontend, and .NET (CQRS), Node.js, Express, MongoDB, and PostgreSQL on the backend. Experienced in delivering clean, maintainable, and high-performance solutions.
         </p>
 
         <div className="flex justify-center md:justify-start mt-6">
