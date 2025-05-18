@@ -22,7 +22,7 @@ function Home() {
       {/* Text Section */}
       <div className="w-full md:w-[450px] max-w-[90%] text-center md:text-left">
         <h1 className="text-3xl md:text-4xl font-semibold">
-          Hey, I'm{' '}
+          Hey, I&rsquo;m{' '}
           <span className="text-blue-500 hover:text-black transition-colors duration-300">
             Wasiq Manzoor
           </span>

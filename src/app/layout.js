@@ -1,5 +1,6 @@
 import "./global.css";
 import Navbar from "@/component/shared-component/Navbar";
+import Link from "next/link"; // Required for client-side routing
 
 export const metadata = {
   title: "Create Next App",
@@ -16,7 +17,10 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+          rel="stylesheet"
+        />
       </head>
       <body className="font-sans bg-[#FAF9F8]">
         <div className="flex min-h-screen flex-col sm:flex-row">
@@ -26,33 +30,34 @@ export default function RootLayout({ children }) {
           </aside>
 
           {/* Main Content */}
-          <main className="flex-1 p-4 sm:p-6 mb-16 sm:mb-0">
-            {children}
-          </main>
+          <main className="flex-1 p-4 sm:p-6 mb-16 sm:mb-0">{children}</main>
 
           {/* Bottom Navbar (only on mobile) */}
-          <nav className="fixed bottom-0 left-0 w-full bg-white  shadow-md flex justify-around py-3 sm:hidden z-50">
-            <a href="/" className="text-gray-700 hover:text-blue-600 text-center">
-            <span className="material-symbols-outlined hover:scale-125 transition-transform duration-300" style={{ fontSize: '0px' }}>
-                    home
-                </span>
-            </a>
-            <a href="/user/about" className="text-gray-700 hover:text-blue-600 text-center">
-            <span
-                    className="material-symbols-outlined hover:scale-125 transition-transform duration-300"
-                    style={{ fontSize: '30px' }}
-                >
-                    contacts
-                </span>
-            </a>
-            <a href="/user/project" className="text-gray-700 hover:text-blue-600 text-center">
-            <span
-                    className="material-symbols-outlined hover:scale-125 transition-transform duration-300"
-                    style={{ fontSize: '30px' }}
-                >
-                    shopping_bag
-                </span>
-            </a>
+          <nav className="fixed bottom-0 left-0 w-full bg-white shadow-md flex justify-around py-3 sm:hidden z-50">
+            <Link href="/" className="text-gray-700 hover:text-blue-600 text-center">
+              <span
+                className="material-symbols-outlined hover:scale-125 transition-transform duration-300"
+                style={{ fontSize: "30px" }}
+              >
+                home
+              </span>
+            </Link>
+            <Link href="/user/about" className="text-gray-700 hover:text-blue-600 text-center">
+              <span
+                className="material-symbols-outlined hover:scale-125 transition-transform duration-300"
+                style={{ fontSize: "30px" }}
+              >
+                contacts
+              </span>
+            </Link>
+            <Link href="/user/project" className="text-gray-700 hover:text-blue-600 text-center">
+              <span
+                className="material-symbols-outlined hover:scale-125 transition-transform duration-300"
+                style={{ fontSize: "30px" }}
+              >
+                shopping_bag
+              </span>
+            </Link>
           </nav>
         </div>
       </body>
